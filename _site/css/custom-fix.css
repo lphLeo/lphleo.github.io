@@ -1,0 +1,23 @@
+/* Fix for button hover text visibility in light theme */
+
+/* Ensure button text is visible on hover in both light and dark themes */
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    color: #ffffff !important;
+    background-color: #1565c0 !important;
+    border-color: #1565c0 !important;
+}
+
+/* Additional fix for all button types to ensure text visibility */
+.btn:hover,
+.btn:focus {
+    color: #ffffff !important;
+}
+
+/* Specific fix for page header buttons */
+.btn-page-header:hover,
+.btn-page-header:focus {
+    color: #ffffff !important;
+}
+
