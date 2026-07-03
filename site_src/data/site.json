@@ -6,16 +6,17 @@
     "base_url": "https://leo-li.com",
     "theme_color": "#1565c0",
     "avatar": "/authors/admin/puheng-li.jpg",
-    "favicon": "/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png",
-    "apple_touch_icon": "/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png",
+    "favicon_svg": "/media/p-icon.svg",
+    "favicon": "/media/p-icon-32.png",
+    "apple_touch_icon": "/media/p-icon-192.png",
     "manifest": "/manifest.webmanifest"
   },
   "nav": [
     ["Home", "about"],
     ["Research", "research"],
     ["Talks", "talks"],
-    ["Work Experience", "experience"],
-    ["Teaching & Service", "teaching"],
+    ["Experience", "experience"],
+    ["Service", "teaching"],
     ["Honors", "honors"],
     ["Miscellaneous", "miscellaneous"]
   ],

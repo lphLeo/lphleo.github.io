@@ -354,6 +354,7 @@ def common_context(data: Dict[str, Any]) -> Dict[str, str]:
         "base_url": attr(site["base_url"].rstrip("/")),
         "theme_color": attr(site["theme_color"]),
         "avatar": attr(site["avatar"]),
+        "favicon_svg": attr(site["favicon_svg"]),
         "favicon": attr(site["favicon"]),
         "apple_touch_icon": attr(site["apple_touch_icon"]),
         "manifest": attr(site["manifest"]),
