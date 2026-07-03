@@ -1,0 +1,45 @@
+{
+  "role": "Teaching Assistant, Stanford University",
+  "courses": [
+    {
+      "code": "STATS 203",
+      "title": "Regression Models and Analysis of Variance",
+      "term": "2025-2026 Spring"
+    },
+    {
+      "code": "STATS 305B",
+      "title": "Applied Statistics II",
+      "term": "2025-2026 Winter"
+    },
+    {
+      "code": "STATS 117",
+      "title": "Introduction to Probability Theory",
+      "term": "2025-2026 Autumn"
+    },
+    {
+      "code": "STATS 208",
+      "title": "Resampling Methods: Bootstrap, Cross Validation and Beyond",
+      "term": "2024-2025 Spring"
+    },
+    {
+      "code": "STATS 207/307",
+      "title": "Time Series Analysis",
+      "term": "2024-2025 Autumn"
+    },
+    {
+      "code": "STATS 191",
+      "title": "Introduction to Applied Statistics",
+      "term": "2023-2024 Summer"
+    },
+    {
+      "code": "STATS 207/307",
+      "title": "Introduction to Time Series Analysis",
+      "term": "2023-2024 Spring"
+    },
+    {
+      "code": "STATS 100",
+      "title": "Mathematics of Sports",
+      "term": "2023-2024 Winter"
+    }
+  ]
+}

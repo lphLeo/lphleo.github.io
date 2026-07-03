@@ -1,0 +1,119 @@
+{
+  "note": "(*: Equal contribution.)",
+  "groups": [
+    {
+      "title": "Publications",
+      "items": [
+        {
+          "title": "Adaptive Spectral Feature Forecasting for Diffusion Sampling Acceleration.",
+          "authors": ["Jiaqi Han", "Juntong Shi", "Puheng Li", "Haotian Ye", "Qiushan Guo", "Stefano Ermon"],
+          "venue": "The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026 (CVPR 2026)",
+          "year": 2026,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2603.01623"},
+            {"label": "Project Page", "url": "https://hanjq17.github.io/Spectrum"}
+          ]
+        },
+        {
+          "title": "InfoTok: Adaptive Discrete Video Tokenizer via Information-Theoretic Compression.",
+          "authors": ["Haotian Ye", "Qiyuan He", "Jiaqi Han", "Puheng Li", "Jiaojiao Fan", "Zekun Hao", "Fitsum Reda", "Yogesh Balaji", "Huayu Chen", "Sheng Liu", "Angela Yao", "James Zou", "Stefano Ermon", "Haoxiang Wang", "Ming-Yu Liu"],
+          "venue": "The Fourteenth International Conference on Learning Representations (ICLR 2026, Oral)",
+          "year": 2026,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2512.16975"},
+            {"label": "Project Page", "url": "https://research.nvidia.com/labs/dir/infotok/"}
+          ]
+        },
+        {
+          "title": "Robust Sampling for Active Statistical Inference.",
+          "authors": ["Puheng Li", "Tijana Zrnic", "Emmanuel Candès"],
+          "venue": "The Thirty-Ninth Annual Conference on Neural Information Processing Systems (NeurIPS 2025)",
+          "year": 2025,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2511.08991"},
+            {"label": "Poster", "url": "https://neurips.cc/media/PosterPDFs/NeurIPS%202025/116971.png?t=1763978653.5100799"}
+          ]
+        },
+        {
+          "title": "CHORDS: Diffusion Sampling Accelerator with Multi-core Hierarchical ODE Solvers.",
+          "authors": ["Jiaqi Han", "Haotian Ye", "Puheng Li", "Minkai Xu", "James Zou", "Stefano Ermon"],
+          "venue": "International Conference on Computer Vision (ICCV 2025)",
+          "year": 2025,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2507.15260"},
+            {"label": "Project Page", "url": "https://hanjq17.github.io/CHORDS/"}
+          ]
+        },
+        {
+          "title": "Analyzing the Role of Permutation Invariance in Linear Mode Connectivity.",
+          "authors": ["Keyao Zhan*", "Puheng Li*", "Lei Wu"],
+          "venue": "The 28th International Conference on Artificial Intelligence and Statistics (AISTATS 2025)",
+          "year": 2025,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2503.06001"},
+            {"label": "Poster", "url": "https://virtual.aistats.org/media/PosterPDFs/AISTATS%202025/9588.png?t=1746112489.647523"}
+          ]
+        },
+        {
+          "title": "On the Generalization Properties of Diffusion Models.",
+          "authors": ["Puheng Li*", "Zhong Li*", "Huishuai Zhang", "Jiang Bian"],
+          "venue": "The Thirty-Seventh Annual Conference on Neural Information Processing Systems (NeurIPS 2023)",
+          "year": 2023,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2311.01797"},
+            {"label": "Poster", "url": "https://neurips.cc/media/PosterPDFs/NeurIPS%202023/70803.png?t=1701077534.4205105"}
+          ]
+        },
+        {
+          "title": "FaiREE: Fair Classification with Finite-Sample and Distribution-Free Guarantee.",
+          "authors": ["Puheng Li", "James Zou", "Linjun Zhang"],
+          "venue": "The Eleventh International Conference on Learning Representations (ICLR 2023)",
+          "year": 2023,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2211.15072"},
+            {"label": "Poster", "url": "https://iclr.cc/media/PosterPDFs/ICLR%202023/11545.png?t=1681542949.965982"}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Preprints",
+      "items": [
+        {
+          "title": "MARS: Margin-Adversarial Risk-controlled Stopping for Parallel LLM Test-time Scaling.",
+          "authors": ["Wenbo Chen*", "Puheng Li*", "Mengyang Liu*", "Weijie Su", "Tianpei Xie"],
+          "year": 2026,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2606.12935"}
+          ]
+        },
+        {
+          "title": "One-Step Generative Modeling via Wasserstein Gradient Flows.",
+          "authors": ["Jiaqi Han*", "Puheng Li*", "Qiushan Guo", "Renyuan Xu", "Stefano Ermon", "Emmanuel J. Candès"],
+          "year": 2026,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2605.11755"},
+            {"label": "Project Page", "url": "https://hanjq17.github.io/W-Flow/"}
+          ]
+        },
+        {
+          "title": "Data-regularized Reinforcement Learning for Diffusion Models at Scale.",
+          "authors": ["Haotian Ye", "Kaiwen Zheng", "Jiashu Xu", "Puheng Li", "Huayu Chen", "Jiaqi Han", "Sheng Liu", "Qinsheng Zhang", "Hanzi Mao", "Zekun Hao", "Prithvijit Chattopadhyay", "Dinghao Yang", "Liang Feng", "Maosheng Liao", "Junjie Bai", "Ming-Yu Liu", "James Zou", "Stefano Ermon"],
+          "year": 2025,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2512.04332"},
+            {"label": "Project Page", "url": "https://research.nvidia.com/labs/dir/ddrl/"}
+          ]
+        },
+        {
+          "title": "Exploring Neural Network Landscapes: Star-Shaped and Geodesic Connectivity.",
+          "authors": ["Zhanran Lin*", "Puheng Li*", "Lei Wu"],
+          "year": 2024,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2404.06391"}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,23 +1,563 @@
-/* Fix for button hover text visibility in light theme */
+.page-wrapper {
+    color: #1f2933;
+    background: #ffffff;
+}
 
-/* Ensure button text is visible on hover in both light and dark themes */
+a {
+    color: #145ea8;
+}
+
+a:hover,
+a:focus {
+    color: #0b477f;
+}
+
+#navbar-main {
+    border-bottom: 1px solid rgba(31, 41, 51, 0.08);
+    box-shadow: none;
+}
+
+.home-section {
+    padding: 62px 0;
+    border-top: 1px solid rgba(31, 41, 51, 0.08);
+}
+
+.home-section:first-of-type {
+    padding-top: 46px;
+    border-top: 0;
+}
+
+.home-section:nth-of-type(even) {
+    background: #ffffff;
+}
+
+.home-section .container {
+    max-width: 1160px;
+}
+
+.section-heading h1 {
+    color: #111827;
+    font-size: 1.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.section-heading h1::after {
+    display: block;
+    width: 32px;
+    height: 2px;
+    margin-top: 0.65rem;
+    background: #1565c0;
+    border-radius: 2px;
+    content: "";
+}
+
+.article-style {
+    line-height: 1.72;
+}
+
+.article-style p:last-child {
+    margin-bottom: 0;
+}
+
+#profile {
+    padding: 18px 8px 26px;
+}
+
+#profile .avatar {
+    width: 230px;
+    height: 230px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(31, 41, 51, 0.1);
+}
+
+.portrait-title h2 {
+    margin-top: 18px;
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: #111827;
+    white-space: nowrap;
+}
+
+.profile-name-cjk {
+    display: inline-block;
+    margin-left: 0.18em;
+    font-size: 0.94em;
+    font-weight: 400;
+    transform: translateY(-0.01em);
+}
+
+.portrait-title h3 {
+    margin-bottom: 6px;
+    color: rgba(31, 41, 51, 0.68);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+.portrait-title h3 a {
+    font-weight: 400;
+}
+
+.network-icon {
+    gap: 12px;
+}
+
+.network-icon li {
+    margin-right: 0;
+}
+
+ul.network-icon li:hover {
+    transform: none;
+}
+
+.network-icon i {
+    font-size: 1.7rem !important;
+}
+
+.wg-about h1 {
+    margin-bottom: 1rem;
+    color: #111827;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.wg-about .section-subheading {
+    color: #111827;
+    font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+    .wg-about > .container > .row > .col-lg-8 {
+        padding-top: 18px;
+    }
+}
+
 .btn-outline-primary:hover,
 .btn-outline-primary:focus,
-.btn-outline-primary:active {
+.btn-outline-primary:active,
+.btn-page-header:hover,
+.btn-page-header:focus {
     color: #ffffff !important;
     background-color: #1565c0 !important;
     border-color: #1565c0 !important;
 }
 
-/* Additional fix for all button types to ensure text visibility */
-.btn:hover,
-.btn:focus {
-    color: #ffffff !important;
+.btn-outline-primary,
+.btn-page-header {
+    border-color: rgba(21, 101, 192, 0.35);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: none;
 }
 
-/* Specific fix for page header buttons */
-.btn-page-header:hover,
-.btn-page-header:focus {
-    color: #ffffff !important;
+.pub-list-item {
+    position: relative;
+    margin-bottom: 0.78rem !important;
+    padding: 0.82rem 0.9rem 0.74rem 2.75rem;
+    border: 1px solid rgba(31, 41, 51, 0.08);
+    border-left: 2px solid rgba(21, 101, 192, 0.45);
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: none;
 }
 
+.pub-list-item .pub-icon {
+    position: absolute;
+    top: 0.95rem;
+    left: 0.95rem;
+    color: rgba(21, 101, 192, 0.54);
+}
+
+.pub-list-item .article-metadata {
+    display: block;
+    line-height: 1.55;
+}
+
+.pub-list-item .publication-title {
+    display: block;
+    margin: 0.14rem 0 0.1rem;
+    color: #1565c0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.42;
+    transition: none;
+}
+
+.pub-list-item .publication-title:hover {
+    color: #0d417b;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.pub-list-item .publication-venue {
+    display: block;
+    color: rgba(0, 0, 0, 0.64);
+    margin-top: 0.08rem;
+}
+
+.pub-list-item p {
+    margin: 0.55rem 0 0;
+}
+
+.pub-list-item .btn-sm {
+    padding: 0.24rem 0.58rem;
+    margin: 0.1rem 0.25rem 0 0;
+    font-size: 0.76rem;
+}
+
+.author-highlighted {
+    color: #0f4f8f;
+    font-weight: 700;
+}
+
+.section-list {
+    display: grid;
+    gap: 0.85rem;
+}
+
+ul.section-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.section-list-item {
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid rgba(31, 41, 51, 0.12);
+}
+
+.section-list-item:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.item-title {
+    color: #1f2933;
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.42;
+}
+
+.item-meta {
+    margin-top: 0.18rem;
+    color: rgba(31, 41, 51, 0.72);
+    line-height: 1.58;
+}
+
+.talk-item p {
+    margin: 0.45rem 0 0;
+}
+
+.compact-list,
+.course-list {
+    margin: 0.55rem 0 0;
+    padding-left: 1.15rem;
+}
+
+.compact-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.compact-list li {
+    position: relative;
+    padding-left: 0.95rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.5;
+}
+
+.course-list {
+    display: grid;
+    gap: 0;
+    margin-top: 0.7rem;
+    padding-left: 0;
+    border-top: 1px solid rgba(31, 41, 51, 0.1);
+    list-style: none;
+}
+
+.course-list li {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr) max-content;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 0.32rem 0;
+    border-bottom: 1px solid rgba(31, 41, 51, 0.1);
+    margin-bottom: 0;
+}
+
+.course-code {
+    color: #0f4f8f;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.course-title {
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.course-title-long {
+    white-space: normal;
+}
+
+.course-term {
+    color: rgba(31, 41, 51, 0.62);
+    font-size: 0.9rem;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.honors-list li {
+    position: relative;
+    padding: 0.16rem 0 0.16rem 0.95rem;
+    line-height: 1.36;
+}
+
+.compact-list li::before,
+.honors-list li::before {
+    position: absolute;
+    top: 0.78em;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(31, 41, 51, 0.58);
+    content: "";
+}
+
+.service-item p,
+.misc-copy p {
+    margin: 0.4rem 0 0;
+}
+
+.section-copy {
+    line-height: 1.7;
+}
+
+.home-section ul:not(.network-icon):not(.ul-edu):not(.section-list):not(.course-list):not(.compact-list):not(.honors-list) {
+    padding-left: 1.15rem;
+}
+
+.home-section ul:not(.network-icon):not(.ul-edu):not(.section-list):not(.course-list) li {
+    margin-bottom: 0.35rem;
+}
+
+#research > .container > p:first-child {
+    margin-bottom: 1.25rem;
+    color: rgba(31, 41, 51, 0.62);
+    font-size: 0.9rem;
+}
+
+.page-body > .home-section:last-of-type {
+    padding: 20px 0 24px;
+    text-align: center;
+}
+
+.page-body > .home-section:last-of-type iframe,
+.page-body > .home-section:last-of-type img,
+.page-body > .home-section:last-of-type canvas {
+    max-width: min(100%, 400px);
+}
+
+.dark .pub-list-item .publication-title {
+    color: #f8f8f2;
+}
+
+.dark .pub-list-item .publication-title:hover {
+    color: #8ecbff;
+    text-decoration-color: #8ecbff;
+}
+
+.dark .pub-list-item .publication-venue {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.site-footer {
+    margin: 0;
+    padding: 2.4rem 0 1rem;
+    border-top: 1px solid rgba(31, 41, 51, 0.08);
+    background: #ffffff;
+}
+
+.site-footer p {
+    max-width: 760px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.7;
+}
+
+body.dark,
+.dark.page-wrapper {
+    color: #f3f4f6;
+    background: #1f2024;
+}
+
+.dark a {
+    color: #8ecbff;
+}
+
+.dark a:hover,
+.dark a:focus {
+    color: #b7dcff;
+}
+
+.dark #navbar-main {
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+    box-shadow: none;
+}
+
+.dark .home-section {
+    border-top-color: rgba(255, 255, 255, 0.08);
+    background: #1f2024;
+}
+
+.dark .home-section:nth-of-type(even) {
+    background: #1f2024;
+}
+
+.dark .section-heading h1 {
+    color: #ffffff;
+}
+
+.dark .wg-about h1,
+.dark .wg-about .section-subheading {
+    color: #ffffff;
+}
+
+.dark .portrait-title h2 {
+    color: #ffffff;
+}
+
+.dark .portrait-title h3 {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.dark .section-heading h1::after {
+    background: #8ecbff;
+}
+
+.dark #profile .avatar {
+    border-color: #2f3138;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.dark .pub-list-item {
+    border-color: rgba(255, 255, 255, 0.08);
+    border-left-color: rgba(142, 203, 255, 0.5);
+    background: rgba(255, 255, 255, 0.025);
+    box-shadow: none;
+}
+
+.dark .pub-list-item .pub-icon {
+    color: rgba(142, 203, 255, 0.72);
+}
+
+.dark .author-highlighted {
+    color: #ffffff;
+}
+
+.dark .section-list-item,
+.dark .course-list,
+.dark .course-list li,
+.dark .honors-list li {
+    border-color: rgba(255, 255, 255, 0.11);
+}
+
+.dark .item-title {
+    color: #ffffff;
+}
+
+.dark .item-meta {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+.dark .compact-list li::before,
+.dark .honors-list li::before {
+    background: rgba(255, 255, 255, 0.58);
+}
+
+.dark .course-code {
+    color: #b7dcff;
+}
+
+.dark .course-term {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.dark #research > .container > p:first-child {
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.dark .btn-outline-primary,
+.dark .btn-page-header {
+    color: #d9edff;
+    border-color: rgba(142, 203, 255, 0.42);
+}
+
+.dark .site-footer {
+    background: #1f2024;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 991.98px) {
+    .section-heading h1::after {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-section {
+        padding: 42px 0;
+    }
+
+    .home-section:first-of-type {
+        padding-top: 34px;
+    }
+
+    #profile .avatar {
+        width: 190px;
+        height: 190px;
+    }
+
+    .portrait-title h2 {
+        font-size: 1.45rem;
+    }
+
+    .course-list li {
+        grid-template-columns: 1fr;
+        gap: 0.08rem;
+        padding-bottom: 0.45rem;
+    }
+
+    .course-title {
+        white-space: normal;
+    }
+
+    .course-list li:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .course-term {
+        text-align: left;
+    }
+
+    .dark .course-list li {
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .pub-list-item {
+        padding: 0.85rem 0.85rem 0.75rem 2.65rem;
+    }
+
+    .pub-list-item .pub-icon {
+        left: 0.85rem;
+    }
+
+    .site-footer {
+        padding-top: 2.8rem;
+    }
+}

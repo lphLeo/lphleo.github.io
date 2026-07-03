@@ -1,0 +1,105 @@
+{
+  "site": {
+    "title": "Puheng Li",
+    "author": "Puheng Li (李朴恒)",
+    "description": "Ph.D. Student, Stanford",
+    "base_url": "https://leo-li.com",
+    "theme_color": "#1565c0",
+    "avatar": "/authors/admin/puheng-li.jpg",
+    "favicon": "/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png",
+    "apple_touch_icon": "/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png",
+    "manifest": "/manifest.webmanifest"
+  },
+  "nav": [
+    ["Home", "about"],
+    ["Research", "research"],
+    ["Talks", "talks"],
+    ["Teaching", "teaching"],
+    ["Experience", "experience"],
+    ["Honors", "honors"],
+    ["Miscellaneous", "miscellaneous"]
+  ],
+  "profile": {
+    "name": "Puheng Li (李朴恒)",
+    "role": "Ph.D. Student",
+    "affiliation": "Stanford",
+    "affiliation_url": "https://www.stanford.edu",
+    "contact": "puhengli AT stanford DOT edu",
+    "bio_html": [
+      "I'm a third-year PhD student in the <a href='https://statistics.stanford.edu/' target='_blank' rel='noopener'>Department of Statistics</a> at <a href='https://www.stanford.edu/' target='_blank' rel='noopener'>Stanford University</a>, where I'm fortunate to be advised by Prof. <a href='https://candes.su.domains/' target='_blank' rel='noopener'>Emmanuel Candès</a> and Prof. <a href='https://renyuanxu.github.io/' target='_blank' rel='noopener'>Renyuan Xu</a>. My research interest lies broadly in leveraging statistical methods to guide modern machine learning and make them more interpretable, reliable, efficient and accurate with statistical guarantees.",
+      "Previously, I received my bachelor's degree in statistics from <a href='https://www.math.pku.edu.cn' target='_blank' rel='noopener'>School of Mathematical Sciences</a> at <a href='https://english.pku.edu.cn/' target='_blank' rel='noopener'>Peking University</a>. I had the pleasure of working with Prof. <a href='https://leiwu0.github.io/index.html' target='_blank' rel='noopener'>Lei Wu</a>, Prof. <a href='https://www.weijie-su.com/' target='_blank' rel='noopener'>Weijie Su</a>, Prof. <a href='https://linjunz.github.io/' target='_blank' rel='noopener'>Linjun Zhang</a>, and Prof. <a href='https://www.james-zou.com/' target='_blank' rel='noopener'>James Zou</a> during my undergraduate study. Please feel free to contact me if you are interested in my research!"
+    ]
+  },
+  "social": [
+    {
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=keEBSDUAAAAJ&hl=en",
+      "icon": "fa-graduation-cap"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/puheng-li-b67742190/",
+      "icon": "fa-linkedin"
+    },
+    {
+      "label": "Twitter",
+      "url": "https://twitter.com/lphLeo623",
+      "icon": "fa-twitter"
+    }
+  ],
+  "education": [
+    {
+      "course": "Ph.D. in Statistics, 2023-",
+      "institution": "Department of Statistics, Stanford University"
+    },
+    {
+      "course": "B.S. in Statistics, 2023",
+      "institution": "School of Mathematical Sciences, Peking University"
+    },
+    {
+      "course": "High School Diploma (Mathematics), 2019",
+      "institution": "Shanghai High School"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Quantitative Analyst Intern, The D. E. Shaw Group (Jun. 2026 - Sep. 2026)",
+      "items_html": []
+    },
+    {
+      "title": "Applied Scientist Intern, Amazon (Jun. 2025 - Sep. 2025)",
+      "items_html": [
+        "Worked on LLMs for fraud detection and prevention."
+      ]
+    },
+    {
+      "title": "Research Scientist Intern, Machine Learning Group, Microsoft Research Asia (Mar. 2023 - Jun. 2023)",
+      "items_html": [
+        "Worked on estimating the generalization error of score based diffusion models, under the supervision of Dr. <a href='https://www.microsoft.com/en-us/research/people/lzhong/' target='_blank' rel='noopener'>Zhong Li</a>, Dr. <a href='https://huishuai-git.github.io/' target='_blank' rel='noopener'>Huishuai Zhang</a>, and Dr. <a href='https://sites.google.com/view/jiangbian' target='_blank' rel='noopener'>Jiang Bian</a>."
+      ]
+    }
+  ],
+  "service_html": "Reviewer: ICLR 2025, NeurIPS 2025 (Main Conference + GenAI in Finance Workshop) &amp; 2026, CVPR 2026, ISIT 2026",
+  "honors": [
+    "2025 Finalist, Cubist PhD Fellowship",
+    "2023 Stars of Tomorrow, Microsoft Research Asia",
+    "2023 Excellent Graduate (PKU &amp; Beijing), equiv. to <em>Summa Cum Laude</em>",
+    "2022 <em>Leo Koguan</em> Scholarship",
+    "2022, 2021, 2020 Merit Student of Peking University",
+    "2021 Peking University Talent Pool Scholarship",
+    "2020 <em>Yizheng</em> Alumni Scholarship",
+    "2018 <b>Gold Medal</b> at the 34th Chinese Mathematical Olympiad (CMO)",
+    "2017 Silver Medal at the 33rd Chinese Mathematical Olympiad (CMO)"
+  ],
+  "miscellaneous_html": [
+    "I love singing, especially solo and a cappella. I was honored one of the <b>Top 10 Singers at Peking University</b>.",
+    "Find some of my performances on my <a href='https://www.bilibili.com/video/BV1rM4y1M74S/' target='_blank' rel='noopener'>Bilibili</a>!",
+    "I enjoy playing the guitar, chess, Go, table tennis, and pool. I also had fun providing voice-over for radio dramas and school promotional videos.",
+    "Try out a <a href='https://www.botzone.org.cn/' target='_blank' rel='noopener'>Gomoku Game</a> with the robot I programmed in college!<br>(Bot ID: 6363ccda832a161fc44b43d3)"
+  ],
+  "footer_html": "© 2026 Puheng Li. Published with <a href='https://wowchemy.com/?utm_campaign=poweredby' target='_blank' rel='noopener'>Wowchemy</a> — the free, <a href='https://github.com/wowchemy/wowchemy-hugo-themes' target='_blank' rel='noopener'>open source</a> website builder that empowers creators.",
+  "visitor_map": {
+    "id": "mapmyvisitors",
+    "src": "https://mapmyvisitors.com/map.js?cl=ffffff&w=400&t=tt&d=cDVi8K_5uxZb7qOQoecqDEUueljn-YXXEm5tPqAd0v0&cmo=3acc3a&cmn=ff5353&ct=ffffff&co=1565c0"
+  }
+}

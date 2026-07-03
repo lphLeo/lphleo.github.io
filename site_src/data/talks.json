@@ -1,0 +1,19 @@
+[
+  {
+    "title": "On the Reliability and Efficiency of Generative AI.",
+    "date": "08/22/2025",
+    "description_html": "Research presentation at Cubist Systematic Strategies.",
+    "links": []
+  },
+  {
+    "title": "On the Generalization Properties of Diffusion Models.",
+    "date": "01/01/2024",
+    "description_html": "Invited talk at <em>Learning on Graphs &amp; Geometry (LoGG)</em> Reading Group, MIT.",
+    "links": [
+      {
+        "label": "Link",
+        "url": "https://portal.valencelabs.com/events/post/on-the-generalization-properties-of-diffusion-models-ckDdc5qwNgZsnTj"
+      }
+    ]
+  }
+]
