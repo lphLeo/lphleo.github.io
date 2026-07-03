@@ -127,6 +127,19 @@ ul.network-icon li:hover {
     font-size: 1rem;
 }
 
+.about-details {
+    display: grid;
+    grid-template-columns: minmax(260px, max-content) minmax(0, 1fr);
+    column-gap: clamp(2.2rem, 5vw, 4.8rem);
+    align-items: start;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.about-contact {
+    white-space: nowrap;
+}
+
 @media (min-width: 992px) {
     .wg-about > .container > .row > .col-lg-8 {
         padding-top: 18px;
@@ -233,6 +246,10 @@ ul.section-list {
     border-bottom: 0;
 }
 
+.teaching-list {
+    gap: 0;
+}
+
 .item-title {
     color: #1f2933;
     font-size: 1.02rem;
@@ -270,10 +287,9 @@ ul.section-list {
 
 .course-list {
     display: grid;
-    gap: 0;
-    margin-top: 0.7rem;
+    gap: 0.22rem;
+    margin-top: 0.35rem;
     padding-left: 0;
-    border-top: 1px solid rgba(31, 41, 51, 0.1);
     list-style: none;
 }
 
@@ -282,9 +298,19 @@ ul.section-list {
     grid-template-columns: max-content minmax(0, 1fr) max-content;
     gap: 1rem;
     align-items: baseline;
-    padding: 0.32rem 0;
-    border-bottom: 1px solid rgba(31, 41, 51, 0.1);
+    padding: 0.18rem 0;
     margin-bottom: 0;
+}
+
+.teaching-list .service-item {
+    margin-top: 0.7rem;
+    padding-top: 0.65rem;
+    border-top: 1px solid rgba(31, 41, 51, 0.1);
+    border-bottom: 0;
+}
+
+.teaching-list .service-item p {
+    margin-top: 0.35rem;
 }
 
 .course-code {
@@ -309,10 +335,14 @@ ul.section-list {
     white-space: nowrap;
 }
 
+.honors-list {
+    gap: 0.55rem;
+}
+
 .honors-list li {
     position: relative;
-    padding: 0.16rem 0 0.16rem 0.95rem;
-    line-height: 1.36;
+    padding: 0.08rem 0 0.08rem 0.95rem;
+    line-height: 1.3;
 }
 
 .compact-list li::before,
@@ -459,10 +489,12 @@ body.dark,
 }
 
 .dark .section-list-item,
-.dark .course-list,
-.dark .course-list li,
 .dark .honors-list li {
     border-color: rgba(255, 255, 255, 0.11);
+}
+
+.dark .teaching-list .service-item {
+    border-top-color: rgba(255, 255, 255, 0.11);
 }
 
 .dark .item-title {
@@ -526,6 +558,11 @@ body.dark,
         font-size: 1.45rem;
     }
 
+    .about-details {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+
     .course-list li {
         grid-template-columns: 1fr;
         gap: 0.08rem;
@@ -543,10 +580,6 @@ body.dark,
 
     .course-term {
         text-align: left;
-    }
-
-    .dark .course-list li {
-        border-bottom-color: rgba(255, 255, 255, 0.08);
     }
 
     .pub-list-item {

@@ -149,12 +149,12 @@ def render_about(data: Dict[str, Any]) -> str:
             <div class="article-style">
 {render_bio(profile)}
             </div>
-            <div class="row">
-              <div class="col-md-4">
+            <div class="about-details">
+              <div class="about-contact">
                 <div class="section-subheading">Contact</div>
                 {esc(profile['contact'])}
               </div>
-              <div class="col-md-8">
+              <div class="about-education">
                 <div class="section-subheading">Education</div>
                 <ul class="ul-edu fa-ul mb-0">
 {render_education(data["education"])}
@@ -276,7 +276,7 @@ def render_talks(talks: Iterable[Dict[str, Any]]) -> str:
     return render_section("talks", "Talks", body)
 
 
-def render_teaching(teaching: Dict[str, Any]) -> str:
+def render_teaching(teaching: Dict[str, Any], service_html: str) -> str:
     courses = []
     for course in teaching["courses"]:
         title_class = "course-title"
@@ -295,9 +295,13 @@ def render_teaching(teaching: Dict[str, Any]) -> str:
         "        <ul class=\"course-list\">\n"
         + "\n".join(courses)
         + "\n        </ul>\n"
+        "        <div class=\"section-list-item service-item\">\n"
+        "          <div class=\"item-title\">Reviewer</div>\n"
+        f"          <p>{service_html}</p>\n"
+        "        </div>\n"
         "      </div>"
     )
-    return render_section("teaching", "Teaching", body)
+    return render_section("teaching", "Teaching & Service", body)
 
 
 def render_experience(data: Dict[str, Any]) -> str:
@@ -310,14 +314,8 @@ def render_experience(data: Dict[str, Any]) -> str:
             f"          <div class=\"item-title\">{esc(job['title'])}</div>{details}\n"
             "        </div>"
         )
-    blocks.append(
-        "        <div class=\"section-list-item service-item\">\n"
-        "          <div class=\"item-title\">Service</div>\n"
-        f"          <p>{data['service_html']}</p>\n"
-        "        </div>"
-    )
     body = "      <div class=\"section-list experience-list\">\n" + "\n".join(blocks) + "\n      </div>"
-    return render_section("experience", "Experience & Service", body)
+    return render_section("experience", "Work Experience", body)
 
 
 def render_honors(data: Dict[str, Any]) -> str:
@@ -375,7 +373,7 @@ def build() -> None:
         "about_section": render_about(data),
         "research_section": render_research(publications),
         "talks_section": render_talks(talks),
-        "teaching_section": render_teaching(teaching),
+        "teaching_section": render_teaching(teaching, data["service_html"]),
         "experience_section": render_experience(data),
         "honors_section": render_honors(data),
         "miscellaneous_section": render_miscellaneous(data),

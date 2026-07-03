@@ -14,8 +14,8 @@
     ["Home", "about"],
     ["Research", "research"],
     ["Talks", "talks"],
-    ["Teaching", "teaching"],
-    ["Experience", "experience"],
+    ["Work Experience", "experience"],
+    ["Teaching & Service", "teaching"],
     ["Honors", "honors"],
     ["Miscellaneous", "miscellaneous"]
   ],
@@ -79,7 +79,7 @@
       ]
     }
   ],
-  "service_html": "Reviewer: ICLR 2025, NeurIPS 2025 (Main Conference + GenAI in Finance Workshop) &amp; 2026, CVPR 2026, ISIT 2026",
+  "service_html": "ICLR 2025, NeurIPS 2025 (Main Conference + GenAI in Finance Workshop) &amp; 2026, CVPR 2026, ISIT 2026",
   "honors": [
     "2025 Finalist, Cubist PhD Fellowship",
     "2023 Stars of Tomorrow, Microsoft Research Asia",
