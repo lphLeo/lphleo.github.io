@@ -11,6 +11,7 @@ from __future__ import annotations
 import html
 import json
 import re
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
@@ -19,6 +20,21 @@ SRC_DIR = Path(__file__).resolve().parent
 ROOT_DIR = SRC_DIR.parent
 DATA_DIR = SRC_DIR / "data"
 TEMPLATE_DIR = SRC_DIR / "templates"
+MONTH_NAMES = [
+    "",
+    "Jan.",
+    "Feb.",
+    "Mar.",
+    "Apr.",
+    "May",
+    "Jun.",
+    "Jul.",
+    "Aug.",
+    "Sep.",
+    "Oct.",
+    "Nov.",
+    "Dec.",
+]
 
 
 def load_json(name: str) -> Any:
@@ -162,6 +178,15 @@ def render_links(links: Iterable[Dict[str, str]]) -> str:
     return "      <p>" + "\n        ".join(buttons) + "</p>"
 
 
+def format_talk_date(value: str) -> str:
+    try:
+        date = datetime.strptime(value, "%m/%d/%Y")
+    except ValueError:
+        return value
+
+    return f"{MONTH_NAMES[date.month]} {date.day}, {date.year}"
+
+
 def is_highlighted_author(author: str) -> bool:
     return "Puheng Li" in author
 
@@ -217,10 +242,11 @@ def render_research(publications: Dict[str, Any]) -> str:
 
 
 def render_talk(item: Dict[str, Any]) -> str:
+    date = format_talk_date(item["date"])
     return (
         '        <div class="section-list-item talk-item">\n'
         f'          <div class="item-title">"{esc(item["title"])}"</div>\n'
-        f"          <div class=\"item-meta\">({esc(item['date'])}). {item['description_html']}</div>\n"
+        f'          <div class="item-meta">{esc(date)} &middot; {item["description_html"]}</div>\n'
         f"{render_links(item.get('links', []))}\n"
         "        </div>"
     )
