@@ -89,12 +89,13 @@ def render_social_links(social: Iterable[Dict[str, str]]) -> str:
 def render_education(items: Iterable[Dict[str, str]]) -> str:
     rendered = []
     for item in items:
+        institution = esc(item["institution"]).replace("Peking University", "Peking&nbsp;University")
         rendered.append(
             "            <li>\n"
             "              <i class=\"fa-li fas fa-graduation-cap\"></i>\n"
             "              <div class=\"description\">\n"
             f"                <p class=\"course\">{esc(item['course'])}</p>\n"
-            f"                <p class=\"institution\">{esc(item['institution'])}</p>\n"
+            f"                <p class=\"institution\">{institution}</p>\n"
             "              </div>\n"
             "            </li>"
         )
@@ -149,11 +150,11 @@ def render_about(data: Dict[str, Any]) -> str:
 {render_bio(profile)}
             </div>
             <div class="row">
-              <div class="col-md-5">
+              <div class="col-md-4">
                 <div class="section-subheading">Contact</div>
                 {esc(profile['contact'])}
               </div>
-              <div class="col-md-7">
+              <div class="col-md-8">
                 <div class="section-subheading">Education</div>
                 <ul class="ul-edu fa-ul mb-0">
 {render_education(data["education"])}
