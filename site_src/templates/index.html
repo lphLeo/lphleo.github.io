@@ -59,7 +59,7 @@
         <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
           <li class="nav-item dropdown theme-dropdown">
             <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
-              <i class="fas fa-moon" aria-hidden="true"></i>
+              <i class="fas fa-moon js-theme-icon" aria-hidden="true"></i>
             </a>
             <div class="dropdown-menu">
               <a href="#" class="dropdown-item js-set-theme-light"><span>Light</span></a>
@@ -90,5 +90,30 @@
 
   <script src="/js/vendor-bundle.min.b73dfaac3b6499dc997741748a7c3fe2.js"></script>
   <script src="/en/js/wowchemy.min.d6e4e6b6f26993a9f4895dc9a864ae34.js"></script>
+  <script>
+    (function () {
+      var icon = document.querySelector(".js-theme-icon");
+      if (!icon) {
+        return;
+      }
+
+      function setThemeIcon(dark) {
+        icon.classList.toggle("fa-moon", dark);
+        icon.classList.toggle("fa-sun", !dark);
+        var label = icon.closest(".nav-link");
+        if (label) {
+          label.setAttribute("aria-label", dark ? "Display preferences: dark theme" : "Display preferences: light theme");
+        }
+      }
+
+      setThemeIcon(document.body.classList.contains("dark"));
+
+      document.addEventListener("wcThemeChange", function (event) {
+        if (event.detail && typeof event.detail.isDarkTheme === "function") {
+          setThemeIcon(event.detail.isDarkTheme());
+        }
+      });
+    }());
+  </script>
 </body>
 </html>
