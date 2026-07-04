@@ -221,9 +221,14 @@ ul.network-icon li:hover {
     line-height: 1.55;
 }
 
-.pub-list-item .publication-title {
+.pub-list-item .publication-title-row {
     display: block;
-    margin: 0.14rem 0 0.1rem;
+    margin: 0.14rem 0 0;
+}
+
+.pub-list-item .publication-title {
+    display: inline;
+    margin: 0;
     color: #1565c0;
     font-size: 1rem;
     font-weight: 600;
@@ -252,6 +257,50 @@ ul.network-icon li:hover {
     padding: 0.24rem 0.58rem;
     margin: 0.1rem 0.25rem 0 0;
     font-size: 0.76rem;
+}
+
+.publication-title-links,
+.talk-title-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    margin-left: 0.35rem;
+    vertical-align: 0.08em;
+}
+
+.publication-title-links .btn-sm,
+.talk-title-links .btn-sm {
+    margin: 0;
+    padding: 0;
+}
+
+.publication-title-links .publication-link-icon,
+.publication-title-links .publication-link-icon:hover,
+.publication-title-links .publication-link-icon:focus,
+.publication-title-links .publication-link-icon:active,
+.talk-title-links .publication-link-icon,
+.talk-title-links .publication-link-icon:hover,
+.talk-title-links .publication-link-icon:focus,
+.talk-title-links .publication-link-icon:active {
+    color: #1565c0 !important;
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    text-decoration: none;
+}
+
+.publication-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.08rem;
+    min-height: 1.08rem;
+}
+
+.publication-link-icon .ai,
+.publication-link-icon .fa {
+    font-size: 0.92rem;
+    line-height: 1;
 }
 
 .author-highlighted {
@@ -442,6 +491,19 @@ ul.section-list {
 .dark .pub-list-item .publication-title:hover {
     color: #b7dcff;
     text-decoration-color: #b7dcff;
+}
+
+.dark .publication-title-links .publication-link-icon,
+.dark .publication-title-links .publication-link-icon:hover,
+.dark .publication-title-links .publication-link-icon:focus,
+.dark .publication-title-links .publication-link-icon:active,
+.dark .talk-title-links .publication-link-icon,
+.dark .talk-title-links .publication-link-icon:hover,
+.dark .talk-title-links .publication-link-icon:focus,
+.dark .talk-title-links .publication-link-icon:active {
+    color: #8ecbff !important;
+    background: transparent !important;
+    border-color: transparent !important;
 }
 
 .dark .pub-list-item .article-metadata {

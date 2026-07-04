@@ -180,15 +180,67 @@ def render_about(data: Dict[str, Any]) -> str:
 """
 
 
+def render_link(link: Dict[str, str]) -> str:
+    label = str(link["label"])
+    href = attr(link["url"])
+    if label.lower() == "arxiv":
+        return (
+            '<a class="btn btn-outline-primary btn-page-header btn-sm publication-link-icon" '
+            f'href="{href}" target="_blank" rel="noopener" aria-label="arXiv" title="arXiv">'
+            '<i class="ai ai-arxiv" aria-hidden="true"></i>'
+            "</a>"
+        )
+    if label.lower() == "project page":
+        return (
+            '<a class="btn btn-outline-primary btn-page-header btn-sm publication-link-icon" '
+            f'href="{href}" target="_blank" rel="noopener" aria-label="Project page" title="Project page">'
+            '<i class="fa fa-globe" aria-hidden="true"></i>'
+            "</a>"
+        )
+    if label.lower() in {"code", "github"}:
+        return (
+            '<a class="btn btn-outline-primary btn-page-header btn-sm publication-link-icon" '
+            f'href="{href}" target="_blank" rel="noopener" aria-label="Code" title="Code">'
+            '<i class="fa fa-github" aria-hidden="true"></i>'
+            "</a>"
+        )
+    if label.lower() == "link":
+        return (
+            '<a class="btn btn-outline-primary btn-page-header btn-sm publication-link-icon" '
+            f'href="{href}" target="_blank" rel="noopener" aria-label="Link" title="Link">'
+            '<i class="fa fa-link" aria-hidden="true"></i>'
+            "</a>"
+        )
+    return (
+        '<a class="btn btn-outline-primary btn-page-header btn-sm" '
+        f'href="{href}" target="_blank" rel="noopener">{esc(label)}</a>'
+    )
+
+
+def render_link_buttons(links: Iterable[Dict[str, str]]) -> str:
+    buttons = [render_link(link) for link in links]
+    return "\n        ".join(buttons)
+
+
 def render_links(links: Iterable[Dict[str, str]]) -> str:
-    buttons = [
-        f'<a class="btn btn-outline-primary btn-page-header btn-sm" '
-        f'href="{attr(link["url"])}" target="_blank" rel="noopener">{esc(link["label"])}</a>'
-        for link in links
-    ]
+    buttons = render_link_buttons(links)
     if not buttons:
         return ""
-    return "      <p>" + "\n        ".join(buttons) + "</p>"
+    return f"      <p>{buttons}</p>"
+
+
+def render_publication_links(links: Iterable[Dict[str, str]]) -> str:
+    buttons = render_link_buttons(links)
+    if not buttons:
+        return ""
+    return f'\n          <span class="publication-title-links">{buttons}</span>'
+
+
+def render_talk_links(links: Iterable[Dict[str, str]]) -> str:
+    buttons = render_link_buttons(links)
+    if not buttons:
+        return ""
+    return f'<span class="talk-title-links">{buttons}</span>'
 
 
 def format_talk_date(value: str) -> str:
@@ -215,14 +267,16 @@ def render_authors(authors: Iterable[str]) -> str:
 def render_publication(item: Dict[str, Any]) -> str:
     venue = item.get("venue")
     venue_html = f'\n        <span class="publication-venue"><em>{esc(venue)}</em>.</span>' if venue else ""
+    link_html = render_publication_links(item.get("links", []))
     return (
         '      <div class="pub-list-item" style="margin-bottom: 1rem">\n'
         '        <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>\n'
         '        <span class="article-metadata li-cite-author">\n'
         f"        {render_authors(item['authors'])}\n"
-        f'        <span class="publication-title">{esc(item["title"])}</span>{venue_html}\n'
+        '        <span class="publication-title-row">\n'
+        f'          <span class="publication-title">{esc(item["title"])}</span>{link_html}\n'
+        f"        </span>{venue_html}\n"
         "        </span>\n"
-        f"{render_links(item.get('links', []))}\n"
         "      </div>"
     )
 
@@ -256,11 +310,11 @@ def render_research(publications: Dict[str, Any]) -> str:
 
 def render_talk(item: Dict[str, Any]) -> str:
     date = format_talk_date(item["date"])
+    link_html = render_talk_links(item.get("links", []))
     return (
         '        <div class="section-list-item talk-item">\n'
-        f'          <div class="item-title">"{esc(item["title"])}"</div>\n'
+        f'          <div class="item-title">"{esc(item["title"])}"{link_html}</div>\n'
         f'          <div class="item-meta">{esc(date)} &middot; {item["description_html"]}</div>\n'
-        f"{render_links(item.get('links', []))}\n"
         "        </div>"
     )
 
