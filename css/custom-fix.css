@@ -115,6 +115,14 @@ ul.network-icon li:hover {
     font-size: 1.7rem !important;
 }
 
+.network-icon .x-icon {
+    display: inline-block;
+    width: 1.62rem;
+    height: 1.62rem;
+    fill: currentColor;
+    transform: translateY(0.01rem);
+}
+
 .wg-about h1 {
     margin-bottom: 1rem;
     color: #111827;
@@ -385,6 +393,16 @@ ul.section-list {
     text-align: center;
 }
 
+.visitor-map-container {
+    display: flex;
+    justify-content: center;
+    min-height: 212px;
+}
+
+.visitor-map-container #mapmyvisitors-widget {
+    max-width: min(100%, 400px);
+}
+
 .page-body > .home-section:last-of-type iframe,
 .page-body > .home-section:last-of-type img,
 .page-body > .home-section:last-of-type canvas {
@@ -476,7 +494,7 @@ body.dark,
 .dark .pub-list-item {
     border-color: rgba(255, 255, 255, 0.08);
     border-left-color: rgba(142, 203, 255, 0.5);
-    background: rgba(255, 255, 255, 0.025);
+    background: #1f2024;
     box-shadow: none;
 }
 

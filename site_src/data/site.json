@@ -43,9 +43,9 @@
       "icon": "fa-linkedin"
     },
     {
-      "label": "Twitter",
-      "url": "https://twitter.com/lphLeo623",
-      "icon": "fa-twitter"
+      "label": "X",
+      "url": "https://x.com/lphLeo623",
+      "icon": "x-twitter"
     }
   ],
   "education": [
@@ -101,6 +101,6 @@
   "footer_html": "© 2026 Puheng Li. Published with <a href='https://wowchemy.com/?utm_campaign=poweredby' target='_blank' rel='noopener'>Wowchemy</a> — the free, <a href='https://github.com/wowchemy/wowchemy-hugo-themes' target='_blank' rel='noopener'>open source</a> website builder that empowers creators.",
   "visitor_map": {
     "id": "mapmyvisitors",
-    "src": "https://mapmyvisitors.com/map.js?cl=ffffff&w=400&t=tt&d=cDVi8K_5uxZb7qOQoecqDEUueljn-YXXEm5tPqAd0v0&cmo=3acc3a&cmn=ff5353&ct=ffffff&co=1565c0"
+    "src": "https://mapmyvisitors.com/map.js?cl=1565c0&w=400&t=tt&d=cDVi8K_5uxZb7qOQoecqDEUueljn-YXXEm5tPqAd0v0&cmo=9db7d6&cmn=ff6b4a&ct=111827&co=ffffff"
   }
 }

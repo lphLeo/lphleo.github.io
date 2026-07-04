@@ -75,11 +75,23 @@ def render_nav_items(nav: Iterable[List[str]]) -> str:
 def render_social_links(social: Iterable[Dict[str, str]]) -> str:
     links = []
     for item in social:
+        icon = item["icon"]
+        if icon == "x-twitter":
+            icon_html = (
+                '<svg class="x-icon" viewBox="0 0 512 512" aria-hidden="true">'
+                '<path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 '
+                '86.8 464H16.2l164.9-188.5L7 48h145.6l102.3 135.2L389.2 '
+                '48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/>'
+                "</svg>"
+            )
+        else:
+            icon_html = f'<i class="fa {attr(icon)}" aria-hidden="true"></i>'
+
         links.append(
             "          <li>\n"
             f'            <a href="{attr(item["url"])}" target="_blank" rel="noopener" '
             f'aria-label="{attr(item["label"])}">\n'
-            f'              <i class="fa {attr(item["icon"])}" aria-hidden="true"></i>\n'
+            f"              {icon_html}\n"
             "            </a>\n"
             "          </li>"
         )
@@ -338,9 +350,68 @@ def render_analytics(data: Dict[str, Any]) -> str:
     visitor_map = data.get("visitor_map")
     if not visitor_map:
         return ""
+    map_id = json.dumps(str(visitor_map["id"]))
+    map_src = json.dumps(str(visitor_map["src"]))
     return f"""
     <section class="home-section wg-pages">
-      <script type="text/javascript" id="{attr(visitor_map['id'])}" src="{attr(visitor_map['src'])}"></script>
+      <div class="visitor-map-container"></div>
+      <script>
+        (function () {{
+          var container = document.currentScript.previousElementSibling;
+          var mapId = {map_id};
+          var mapSrc = {map_src};
+          var lastMode = null;
+          var colorSets = {{
+            light: {{ co: "ffffff", cl: "1565c0", ct: "111827" }},
+            dark: {{ co: "1f2024", cl: "ffffff", ct: "ffffff" }}
+          }};
+
+          function isDarkTheme(event) {{
+            if (event && event.detail && typeof event.detail.isDarkTheme === "function") {{
+              return event.detail.isDarkTheme();
+            }}
+            return document.body.classList.contains("dark");
+          }}
+
+          function buildMapUrl(dark) {{
+            var colors = dark ? colorSets.dark : colorSets.light;
+            var url = new URL(mapSrc, window.location.href);
+            url.searchParams.set("co", colors.co);
+            url.searchParams.set("cl", colors.cl);
+            url.searchParams.set("ct", colors.ct);
+            return url.toString();
+          }}
+
+          function renderMap(dark) {{
+            var mode = dark ? "dark" : "light";
+            if (lastMode === mode && container.children.length > 0) {{
+              return;
+            }}
+            lastMode = mode;
+            container.innerHTML = "";
+
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.id = mapId;
+            script.src = buildMapUrl(dark);
+            container.appendChild(script);
+          }}
+
+          function renderCurrentMap() {{
+            renderMap(isDarkTheme());
+          }}
+
+          document.addEventListener("wcThemeChange", function (event) {{
+            renderMap(isDarkTheme(event));
+          }});
+
+          if (document.readyState === "loading") {{
+            document.addEventListener("DOMContentLoaded", renderCurrentMap);
+          }} else {{
+            renderCurrentMap();
+          }}
+        }}());
+      </script>
     </section>
 """
 

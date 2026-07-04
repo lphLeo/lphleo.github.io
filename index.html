@@ -106,8 +106,8 @@
             </a>
           </li>
           <li>
-            <a href="https://twitter.com/lphLeo623" target="_blank" rel="noopener" aria-label="Twitter">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
+            <a href="https://x.com/lphLeo623" target="_blank" rel="noopener" aria-label="X">
+              <svg class="x-icon" viewBox="0 0 512 512" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 86.8 464H16.2l164.9-188.5L7 48h145.6l102.3 135.2L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
             </a>
           </li>
               </ul>
@@ -457,7 +457,64 @@
 
 
     <section class="home-section wg-pages">
-      <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?cl=ffffff&amp;w=400&amp;t=tt&amp;d=cDVi8K_5uxZb7qOQoecqDEUueljn-YXXEm5tPqAd0v0&amp;cmo=3acc3a&amp;cmn=ff5353&amp;ct=ffffff&amp;co=1565c0"></script>
+      <div class="visitor-map-container"></div>
+      <script>
+        (function () {
+          var container = document.currentScript.previousElementSibling;
+          var mapId = "mapmyvisitors";
+          var mapSrc = "https://mapmyvisitors.com/map.js?cl=1565c0&w=400&t=tt&d=cDVi8K_5uxZb7qOQoecqDEUueljn-YXXEm5tPqAd0v0&cmo=9db7d6&cmn=ff6b4a&ct=111827&co=ffffff";
+          var lastMode = null;
+          var colorSets = {
+            light: { co: "ffffff", cl: "1565c0", ct: "111827" },
+            dark: { co: "1f2024", cl: "ffffff", ct: "ffffff" }
+          };
+
+          function isDarkTheme(event) {
+            if (event && event.detail && typeof event.detail.isDarkTheme === "function") {
+              return event.detail.isDarkTheme();
+            }
+            return document.body.classList.contains("dark");
+          }
+
+          function buildMapUrl(dark) {
+            var colors = dark ? colorSets.dark : colorSets.light;
+            var url = new URL(mapSrc, window.location.href);
+            url.searchParams.set("co", colors.co);
+            url.searchParams.set("cl", colors.cl);
+            url.searchParams.set("ct", colors.ct);
+            return url.toString();
+          }
+
+          function renderMap(dark) {
+            var mode = dark ? "dark" : "light";
+            if (lastMode === mode && container.children.length > 0) {
+              return;
+            }
+            lastMode = mode;
+            container.innerHTML = "";
+
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.id = mapId;
+            script.src = buildMapUrl(dark);
+            container.appendChild(script);
+          }
+
+          function renderCurrentMap() {
+            renderMap(isDarkTheme());
+          }
+
+          document.addEventListener("wcThemeChange", function (event) {
+            renderMap(isDarkTheme(event));
+          });
+
+          if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", renderCurrentMap);
+          } else {
+            renderCurrentMap();
+          }
+        }());
+      </script>
     </section>
 
   </div>
