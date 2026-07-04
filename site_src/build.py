@@ -313,7 +313,7 @@ def render_teaching(teaching: Dict[str, Any], service_html: str) -> str:
         "        </div>\n"
         "      </div>"
     )
-    return render_section("teaching", "Teaching & Service", body)
+    return render_section("teaching", "Service", body)
 
 
 def render_experience(data: Dict[str, Any]) -> str:
@@ -327,7 +327,7 @@ def render_experience(data: Dict[str, Any]) -> str:
             "        </div>"
         )
     body = "      <div class=\"section-list experience-list\">\n" + "\n".join(blocks) + "\n      </div>"
-    return render_section("experience", "Work Experience", body)
+    return render_section("experience", "Experience", body)
 
 
 def render_honors(data: Dict[str, Any]) -> str:
