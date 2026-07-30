@@ -2,6 +2,11 @@
   "role": "Teaching Assistant, Stanford University",
   "courses": [
     {
+      "code": "STATS 118",
+      "title": "Probability Theory for Statistical Inference",
+      "term": "2026-2027 Autumn"
+    },
+    {
       "code": "STATS 203",
       "title": "Regression Models and Analysis of Variance",
       "term": "2025-2026 Spring"

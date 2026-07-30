@@ -93,6 +93,15 @@
           ]
         },
         {
+          "title": "Structured Scaling of AI Discovery Across Diverse Scientific Domains.",
+          "authors": ["Haotian Ye", "Haowei Lin", "Jingyi Tang", "Yizhen Luo", "Rahul Thapa", "Caiyin Yang", "Chang Su", "Rui Yang", "Ruihua Liu", "Rundao Li", "Zeyu Li", "Pengwei Sun", "Chong Gao", "Dachao Ding", "Guangrong He", "Miaolei Zhang", "Lina Sun", "Wenyang Wang", "Yuchen Zhong", "Zhuohao Shen", "Puheng Li", "Pan Lu", "Bianxiao Cui", "Di He", "Jianzhu Ma", "Junfeng Li", "Hexi Baoyin", "Yejin Choi", "Stefano Ermon", "Xiaowen Chu", "Tongyang Li", "Yuzhi Xu", "James Zou"],
+          "year": 2026,
+          "links": [
+            {"label": "arXiv", "url": "https://arxiv.org/abs/2604.19341"},
+            {"label": "Project Page", "url": "https://www.wq-will.com/simpletes"}
+          ]
+        },
+        {
           "title": "Data-regularized Reinforcement Learning for Diffusion Models at Scale.",
           "authors": ["Haotian Ye", "Kaiwen Zheng", "Jiashu Xu", "Puheng Li", "Huayu Chen", "Jiaqi Han", "Sheng Liu", "Qinsheng Zhang", "Hanzi Mao", "Zekun Hao", "Prithvijit Chattopadhyay", "Dinghao Yang", "Liang Feng", "Maosheng Liao", "Junjie Bai", "Ming-Yu Liu", "James Zou", "Stefano Ermon"],
           "year": 2025,
