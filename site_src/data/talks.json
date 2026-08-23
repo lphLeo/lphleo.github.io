@@ -1,6 +1,17 @@
 [
   {
     "title": "One-Step Generative Modeling via Wasserstein Gradient Flows.",
+    "date": "11/01/2026",
+    "description_html": "Informs Annual Meeting, San Francisco.",
+    "links": [
+      {
+        "label": "Link",
+        "url": "https://submissions.mirasmart.com/InformsAnnual2026/Itinerary/EventDetail.aspx?evt=600"
+      }
+    ]
+  },
+  {
+    "title": "One-Step Generative Modeling via Wasserstein Gradient Flows.",
     "date": "08/06/2026",
     "description_html": "Joint Statistical Meetings, Boston.",
     "links": [
