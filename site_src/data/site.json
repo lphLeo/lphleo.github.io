@@ -64,7 +64,7 @@
   ],
   "experience": [
     {
-      "title": "Quantitative Analyst Intern, <a href='https://www.deshaw.com/' target='_blank' rel='noopener'>The D. E. Shaw Group</a> (Jun. 2026 - Sep. 2026)",
+      "title_html": "Quantitative Analyst Intern, <a href='https://www.deshaw.com/' target='_blank' rel='noopener'>The D. E. Shaw Group</a> (Jun. 2026 - Sep. 2026)",
       "items_html": []
     },
     {
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "title": "Research Scientist Intern, <a href='https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/' target='_blank' rel='noopener'>Microsoft Research Asia</a> (Mar. 2023 - Jun. 2023)",
+      "title_html": "Research Scientist Intern, <a href='https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/' target='_blank' rel='noopener'>Microsoft Research Asia</a> (Mar. 2023 - Jun. 2023)",
       "items_html": [
         "Worked on estimating the generalization error of score based diffusion models in the Machine Learning Group, under the supervision of Dr. <a href='https://www.microsoft.com/en-us/research/people/lzhong/' target='_blank' rel='noopener'>Zhong Li</a>, Dr. <a href='https://huishuai-git.github.io/' target='_blank' rel='noopener'>Huishuai Zhang</a>, and Dr. <a href='https://sites.google.com/view/jiangbian' target='_blank' rel='noopener'>Jiang Bian</a>."
       ]

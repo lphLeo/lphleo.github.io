@@ -373,11 +373,12 @@ def render_teaching(teaching: Dict[str, Any], service_html: str) -> str:
 def render_experience(data: Dict[str, Any]) -> str:
     blocks = []
     for job in data["experience"]:
+        title = job["title_html"] if "title_html" in job else esc(job["title"])
         items = "\n".join(f"          <li>{item}</li>" for item in job["items_html"])
         details = f"\n        <ul class=\"compact-list\">\n{items}\n        </ul>" if items else ""
         blocks.append(
             "        <div class=\"section-list-item experience-item\">\n"
-            f"          <div class=\"item-title\">{esc(job['title'])}</div>{details}\n"
+            f"          <div class=\"item-title\">{title}</div>{details}\n"
             "        </div>"
         )
     body = "      <div class=\"section-list experience-list\">\n" + "\n".join(blocks) + "\n      </div>"
