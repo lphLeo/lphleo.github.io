@@ -14,9 +14,9 @@
   "nav": [
     ["Home", "about"],
     ["Research", "research"],
-    ["Talks", "talks"],
     ["Experience", "experience"],
     ["Honors", "honors"],
+    ["Talks", "talks"],
     ["Service", "teaching"],
     ["Miscellaneous", "miscellaneous"]
   ],
@@ -25,6 +25,7 @@
     "role": "Ph.D. Student",
     "affiliation": "Stanford",
     "affiliation_url": "https://www.stanford.edu",
+    "affiliation_logo": "/media/logos/stanford.png",
     "contact": "puhengli AT stanford DOT edu",
     "bio_html": [
       "I'm a fourth-year PhD student in the <a href='https://statistics.stanford.edu/' target='_blank' rel='noopener'>Department of Statistics</a> at <a href='https://www.stanford.edu/' target='_blank' rel='noopener'>Stanford University</a>, where I'm fortunate to be advised by Prof. <a href='https://candes.su.domains/' target='_blank' rel='noopener'>Emmanuel Candès</a> and Prof. <a href='https://renyuanxu.github.io/' target='_blank' rel='noopener'>Renyuan Xu</a>. My research interest lies broadly in leveraging statistical methods to guide modern machine learning, with a focus on generative models.",
@@ -64,18 +65,27 @@
   ],
   "experience": [
     {
-      "title_html": "Quantitative Analyst Intern, <a href='https://www.deshaw.com/' target='_blank' rel='noopener'>The D. E. Shaw Group</a> (Jun. 2026 - Sep. 2026)",
+      "logo": "/media/logos/deshaw.svg",
+      "logo_dark": "/media/logos/deshaw-dark.svg",
+      "logo_alt": "The D. E. Shaw Group logo",
+      "title_html": "Quantitative Researcher Intern, <a href='https://www.deshaw.com/' target='_blank' rel='noopener'>The D. E. Shaw Group</a> (Jun. 2026 - Sep. 2026)",
       "items_html": [
         "Worked on U.S. equities."
       ]
     },
     {
+      "logo": "/media/logos/amazon.svg",
+      "logo_dark": "/media/logos/amazon-dark.svg",
+      "logo_alt": "Amazon logo",
       "title": "Applied Scientist Intern, Amazon (Jun. 2025 - Sep. 2025)",
       "items_html": [
         "Worked on LLMs for fraud detection and prevention."
       ]
     },
     {
+      "logo": "/media/logos/microsoft.svg",
+      "logo_dark": "/media/logos/microsoft-dark.svg",
+      "logo_alt": "Microsoft logo",
       "title_html": "Research Scientist Intern, <a href='https://www.microsoft.com/en-us/research/lab/microsoft-research-asia/' target='_blank' rel='noopener'>Microsoft Research Asia</a> (Mar. 2023 - Jun. 2023)",
       "items_html": [
         "Worked on estimating the generalization error of score based diffusion models in the Machine Learning Group, under the supervision of Dr. <a href='https://www.microsoft.com/en-us/research/people/lzhong/' target='_blank' rel='noopener'>Zhong Li</a>, Dr. <a href='https://huishuai-git.github.io/' target='_blank' rel='noopener'>Huishuai Zhang</a>, and Dr. <a href='https://sites.google.com/view/jiangbian' target='_blank' rel='noopener'>Jiang Bian</a>."
@@ -103,6 +113,6 @@
   "footer_html": "© 2026 Puheng Li. Published with <a href='https://wowchemy.com/?utm_campaign=poweredby' target='_blank' rel='noopener'>Wowchemy</a> — the free, <a href='https://github.com/wowchemy/wowchemy-hugo-themes' target='_blank' rel='noopener'>open source</a> website builder that empowers creators.",
   "visitor_map": {
     "id": "mapmyvisitors",
-    "src": "https://mapmyvisitors.com/map.js?cl=1565c0&w=400&t=tt&d=cDVi8K_5uxZb7qOQoecqDEUueljn-YXXEm5tPqAd0v0&cmo=9db7d6&cmn=ff6b4a&ct=111827&co=ffffff"
+    "src": "https://mapmyvisitors.com/map.js?cl=1565c0&w=400&t=m&d=cDVi8K_5uxZb7qOQoecqDEUueljn-YXXEm5tPqAd0v0&cmo=9db7d6&cmn=ff6b4a&ct=111827&co=ffffff"
   }
 }

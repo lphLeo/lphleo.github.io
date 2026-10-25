@@ -150,7 +150,7 @@ def render_about(data: Dict[str, Any]) -> str:
               <div class="portrait-title">
                 <h2>{render_profile_name(profile['name'])}</h2>
                 <h3>{esc(profile['role'])}</h3>
-                <h3><a href="{attr(profile['affiliation_url'])}" target="_blank" rel="noopener"><span>{esc(profile['affiliation'])}</span></a></h3>
+                <h3><a class="profile-affiliation" href="{attr(profile['affiliation_url'])}" target="_blank" rel="noopener"><img class="affiliation-logo" src="{attr(profile['affiliation_logo'])}" alt="" width="50" height="50"><span>{esc(profile['affiliation'])}</span></a></h3>
               </div>
               <ul class="network-icon" aria-hidden="true">
 {render_social_links(data["social"])}
@@ -378,7 +378,13 @@ def render_experience(data: Dict[str, Any]) -> str:
         details = f"\n        <ul class=\"compact-list\">\n{items}\n        </ul>" if items else ""
         blocks.append(
             "        <div class=\"section-list-item experience-item\">\n"
+            '          <div class="experience-logo">\n'
+            f'            <img class="logo-light" src="{attr(job["logo"])}" alt="{attr(job["logo_alt"])}" width="96" height="48" loading="lazy">\n'
+            f'            <img class="logo-dark" src="{attr(job["logo_dark"])}" alt="{attr(job["logo_alt"])}" width="96" height="48" loading="lazy">\n'
+            '          </div>\n'
+            '          <div class="experience-details">\n'
             f"          <div class=\"item-title\">{title}</div>{details}\n"
+            '          </div>\n'
             "        </div>"
         )
     body = "      <div class=\"section-list experience-list\">\n" + "\n".join(blocks) + "\n      </div>"
@@ -434,6 +440,7 @@ def render_analytics(data: Dict[str, Any]) -> str:
             url.searchParams.set("co", colors.co);
             url.searchParams.set("cl", colors.cl);
             url.searchParams.set("ct", colors.ct);
+            url.searchParams.set("w", Math.min(400, container.clientWidth).toString());
             return url.toString();
           }}
 

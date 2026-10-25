@@ -1,0 +1,21 @@
+deshaw.svg
+Source: https://www.deshaw.com/
+Original inline mobile navigation SVG paths. White fill normalized to official primary navigation blue #1e52f3 from the same page stylesheet. viewBox 0 0 191.17 41.75.
+
+amazon.svg
+Source: https://www.aboutamazon.com/
+Original current Amazon wordmark/smile SVG paths from footer LogoLightV2. Lettering normalized to Amazon Squid Ink #232F3E for light background; original orange #FF6200 retained. viewBox 0 0 99 33.
+
+microsoft.svg
+Source: https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg
+Provenance: https://commons.wikimedia.org/wiki/File:Microsoft_logo_(2012).svg
+Microsoft Corporation artwork originally from https://static.flipgrid.com/fg-svgs/microsoft-logo.svg (original URL no longer available). Transparent vector wordmark and four-color symbol, viewBox 0 0 337.6 72.
+
+stanford.png
+Source: https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png
+Unmodified official current full-color Block S with tree illustration; 400x400 with white padding. Emblem actual size approximately 186x282; render 50x50 for approx 23x35 visible emblem.
+
+Dark theme variants
+deshaw-dark.svg: Same vector paths as deshaw.svg; blue lettering changed to white.
+amazon-dark.svg: Same vector paths as amazon.svg; dark lettering changed to white, orange smile preserved.
+microsoft-dark.svg: Same vector paths as microsoft.svg; #737373 lettering changed to white, all four symbol colors preserved.

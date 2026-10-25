@@ -125,6 +125,19 @@ a:focus {
     font-weight: 400;
 }
 
+.profile-affiliation {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.affiliation-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
 .network-icon {
     gap: 12px;
 }
@@ -331,6 +344,39 @@ ul.section-list {
 
 .teaching-list {
     gap: 0;
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: 116px minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+}
+
+.experience-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 10px;
+}
+
+.experience-logo img {
+    display: block;
+    width: 96px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.experience-logo .logo-dark {
+    display: none;
+}
+
+.dark .experience-logo .logo-light {
+    display: none;
+}
+
+.dark .experience-logo .logo-dark {
+    display: block;
 }
 
 .item-title {
@@ -664,6 +710,20 @@ body.dark,
 }
 
 @media (max-width: 768px) {
+    .experience-item {
+        grid-template-columns: 76px minmax(0, 1fr);
+        gap: 0.65rem;
+    }
+
+    .experience-logo {
+        padding: 6px;
+    }
+
+    .experience-logo img {
+        width: 64px;
+        height: 40px;
+    }
+
     .home-section {
         padding: 42px 0;
     }
