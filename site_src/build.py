@@ -281,10 +281,24 @@ def render_publication(item: Dict[str, Any]) -> str:
     )
 
 
+def render_report(item: Dict[str, Any]) -> str:
+    link_html = render_publication_links([{"label": "Project Page", "url": item["url"]}])
+    return (
+        '      <article class="pub-list-item technical-report">\n'
+        '        <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>\n'
+        '        <span class="publication-title-row">\n'
+        f'          <span class="publication-title">{esc(item["title"])}</span>{link_html}\n'
+        '        </span>\n'
+        "      </article>"
+    )
+
+
 def render_publication_group(group: Dict[str, Any]) -> str:
-    items = "\n".join(render_publication(item) for item in group["items"])
+    render_item = render_report if group.get("kind") == "report" else render_publication
+    items = "\n".join(render_item(item) for item in group["items"])
+    group_id = f' id="{attr(group["id"])}"' if group.get("id") else ""
     return f"""
-        <div class="row">
+        <div class="row"{group_id}>
           <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
             <h1 class="mb-0">{esc(group['title'])}</h1>
           </div>

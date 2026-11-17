@@ -119,6 +119,17 @@
           ]
         }
       ]
+    },
+    {
+      "title": "Technical Reports",
+      "id": "technical-reports",
+      "kind": "report",
+      "items": [
+        {
+          "title": "After42: Can AI Propose Interesting Research Questions?",
+          "url": "https://after42.org/"
+        }
+      ]
     }
   ]
 }
