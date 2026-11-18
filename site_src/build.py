@@ -380,6 +380,10 @@ def render_teaching(teaching: Dict[str, Any], service_html: str) -> str:
         f"          <p>{service_html}</p>\n"
         "        </div>\n"
         "        <div class=\"section-list-item service-item\">\n"
+        "          <div class=\"item-title\">Journal Reviewer</div>\n"
+        f"          <p>{esc(teaching['journal_review'])}</p>\n"
+        "        </div>\n"
+        "        <div class=\"section-list-item service-item\">\n"
         "          <div class=\"item-title\">PhD Reviewer</div>\n"
         f'          <p><a href="{attr(teaching["phd_review"]["url"])}" target="_blank" rel="noopener">{esc(teaching["phd_review"]["organization"])}</a></p>\n'
         "        </div>\n"
